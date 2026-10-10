@@ -1,0 +1,75 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroShield AI | Scam Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="brand">🛡️ NeuroShield <span>AI</span></div>
+        <p class="tagline">Your intelligent shield against digital scams.</p>
+        <div class="status"><span class="status-dot"></span> THREAT DETECTION SYSTEM</div>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h1>Analyze a suspicious message</h1>
+            <p class="muted">Paste an SMS, email, or chat message below.</p>
+
+            <textarea id="message" placeholder="Example: Congratulations! You won a prize. Click this link immediately to claim your reward..."></textarea>
+
+            <div class="samples">
+                <span>Try a sample:</span>
+                <button class="sample-btn" data-sample="Congratulations! You won ₹50,000! Click this link immediately to claim your prize.">Prize scam</button>
+                <button class="sample-btn" data-sample="Your bank account will be blocked today. Share your OTP immediately to prevent suspension.">Bank alert</button>
+                <button class="sample-btn" data-sample="Hi, are we still meeting at the library tomorrow at 10 AM?">Safe message</button>
+            </div>
+
+            <button id="analyzeBtn" class="analyze-btn">🛡️ Analyze Message</button>
+            <p class="disclaimer">Prototype results are heuristic estimates, not a guarantee of safety.</p>
+        </section>
+
+        <section id="emptyState" class="panel empty-state">
+            <div class="shield">🛡️</div>
+            <h2>Your security report will appear here</h2>
+            <p class="muted">Submit a message to inspect potential warning signs.</p>
+        </section>
+
+        <section id="report" class="panel report" hidden>
+            <div class="report-heading">
+                <div>
+                    <p class="eyebrow">ANALYSIS REPORT</p>
+                    <h2>Threat assessment</h2>
+                </div>
+                <div id="riskLevel" class="risk-badge">UNKNOWN</div>
+            </div>
+
+            <div class="score-row">
+                <div>
+                    <p class="muted">Estimated risk score</p>
+                    <div><strong id="score">0</strong><span>/100</span></div>
+                </div>
+                <div class="score-track"><div id="scoreBar"></div></div>
+            </div>
+
+            <h3>Detected warning signs</h3>
+            <ul id="signals"></ul>
+
+            <div class="recommendation-box">
+                <h3>Recommended action</h3>
+                <p id="recommendation"></p>
+            </div>
+
+            <button id="resetBtn" class="reset-btn">Analyze another message</button>
+        </section>
+    </main>
+
+    <footer>NeuroShield AI · Student project prototype · Stay alert, stay protected.</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
